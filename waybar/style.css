@@ -1,0 +1,230 @@
+*{
+  /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Font Awesome ,Liberation Mono, "JetbrainsMono Nerd Font";
+    font-weight:900;
+}
+
+window#waybar {
+    margin-top: 10px;	
+    /*border: 2px solid; */
+    font-size: 16px;
+    color:transparent;
+    background-color: #070f1a;
+    }
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect 
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+} 
+*/
+/* you can set a style on hover for any module like this */
+/*#pulseaudio:hover {
+    font-weight: bold;
+
+} */
+#workspaces button{
+    color: #c964f5;
+    font-size:14px;
+}
+#workspace:hover{
+  color:#2b0335;
+}
+#modules-right {
+  font-size: 18px;
+}
+
+#clock,
+#battery,
+#backlight,
+#network,
+#bluetooth
+#pulseaudio,
+#wireplumber,
+#mode,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: transparent;
+    color: #ff7ab4;
+    font-weight: bold;
+    font-size:16px;
+    font-family:arial;
+}
+#clock:hover{
+    color: #f58ec5;
+}
+
+#battery {
+    background-color: transparent;
+    color: #3baaff;
+    border : 0px;
+    border-color: #2b0335;
+    padding-right: 15px;
+}
+#battery:hover,#battery.charging:hover,#battery.plugged:hover,#battery.warning:not(.charging):hover,#battery.critical:not(.charging):hover {
+    color: #91b7fa;
+}
+
+#battery.charging, #battery.plugged {
+    color: #3baaff;
+    background-color: transparent;
+}
+
+#battery.warning:not(.charging) {
+	background-color: transparent;
+	color: #ff9d00;
+}
+
+@keyframes blink {
+    to {
+        background-color: transparent;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: transparent;
+    color: #f74d7a;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#bluetooth{
+   color :#52c6f7;
+   font-size: 16px;
+   font-family: arial;
+}
+#bluetooth:hover,#bluetooth.off:hover {
+   color:#91b7fa;
+}
+
+#bluetooth.off{
+  color: #f0b051;
+}
+
+#backlight {
+    background-color: transparent;
+    color:#ff7591;
+}
+#backlight:hover {
+    color:#ff9cae;
+}
+
+#network {
+    background-color: transparent;
+    color: #e88282;
+    font-size: 16px;
+    font-family: arial;
+}
+#network:hover, #network.disabled:hover, #network.disconnected:hover {
+  color:#ff843d;
+}
+#network.disabled{
+  background-color:transparent;
+  color:#fc431e; 
+}
+#network.disconnected {
+    background-color: transparent;
+    color: #e6b03e;
+}
+
+#pulseaudio {
+    background-color: transparent;
+    color:#925cf7;
+}
+
+#pulseaudio.muted, #pulseaudio.critical{
+    background-color: transparent;
+    color: #ff337e;
+}
+#pulseaudio:hover{
+  color: #bd73f5;
+}
+/*#pulseaudio.warning{
+    background-color: transparent;
+    color: #ff8800;
+}	*/
+
+#wireplumber {
+    background-color: #fff0f5;
+    color: #000000;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+#custom-powermenu {
+    color: #ff914d;
+    font-size: 15px;
+    font-family:"baragraph";
+    padding-right:10px;
+    border: 0px;
+
+}
+
+
+#custom-powermenu:hover{
+  color:#ebc642;
+}
+/*menu {
+  font-family:"Maple Mono";
+  font-size:20px;
+	background: #070f1a;
+	color: #f5a447;
+  opacity: 0.8;
+  margin: 10px 10px 10px 10px;
+  padding:10px 5px 10px 5px;
+}
+menuitem {
+	border-radius: 3px;
+  border:0px;
+  padding:12px 2px 12px 2px; 
+  font-size: 16px; 
+  background-color:transparent;
+  
+}
+menu:hover{
+  color:#f26de5;
+}
+menuitem:hover{
+  color:#f26de5; 
+}
+*/
+tooltip {
+        background-color: #141413; /* e.g., for dark grey */
+        border: none; 
+        opacity:0.9;
+        color: #73f714;
+    
+}
+tooltip label {
+        background-color: #141413; /* Match background for label consistency */
+        color: #ffffff; /* e.g., #ffffff for white text */
+        border-radius: 5px; /* Optional: add rounded corners */
+        padding: 5px 2px; /* Optional: adjust padding */ 
+}
+

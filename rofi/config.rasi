@@ -1,0 +1,35 @@
+/*
+
+   _____             __ _                       _   _             
+  / ____|           / _(_)                     | | (_)            
+ | |     ___  _ __ | |_ _  __ _ _   _ _ __ __ _| |_ _  ___  _ __  
+ | |    / _ \| '_ \|  _| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \ 
+ | |___| (_) | | | | | | | (_| | |_| | | | (_| | |_| | (_) | | | |
+  \_____\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|
+                           __/ |                                  
+                          |___/                                   
+-------------------------------------------------------------------------- 
+Made by Kailasgm                                                                 */
+
+/* Mostly me just copying others works and tweaking things here and there to fit my liking */
+
+configuration {
+  modi:                       "drun,filebrowser";
+  show-icons:                 true;
+  drun-icon-theme:            "Papirus-Dark";
+  display-drun:               "Apps ";
+  display-filebrowser:        "Files 󰈢";
+  drun-display-format:        "{name}";
+  file-browser-show-hidden:   true;
+  click-to-exit:              true;
+}
+
+@theme "themes"  
+
+/* Why did i direct it to another folder ?
+  
+  (1) When i try to do config and themes in the same file i get --------- bar above my list box.
+      This problem is mentioned in https://github.com/davatorium/rofi/discussions/1522 .
+  (2) U could have many themes when u direct it themes folder like this (with the same config)
+      which will make switching b/w the themes easier. 
+*/      
