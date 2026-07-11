@@ -1,0 +1,9 @@
+import QtQuick
+import Quickshell
+
+Shell {
+    Text {
+        text: "Hello from Quickshell"
+        anchors.centerIn: parent
+    }
+}

@@ -1,0 +1,19 @@
+background = #070f1a
+background-opacity = 0.8
+# Horizontal padding (left and right edges)
+window-padding-x = 15
+
+# Vertical padding (top and bottom edges)
+window-padding-y = 20
+font-family = "Cascadia Code"
+font-size = 12
+cursor-color = #00A5FF
+cursor-style = bar
+foreground = #42e1f6
+resize-overlay = never
+selection-background = #131E2D
+selection-foreground = #7112A4
+confirm-close-surface = false
+scrollbar = never
+link-url = false
+
